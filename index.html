@@ -6,10 +6,15 @@
   <title>Abhiram Batchali</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- CURSOR GLOW -->
+  <div class="cursor-glow" id="cursorGlow"></div>
 
   <!-- NAV -->
   <nav id="nav">
@@ -28,20 +33,28 @@
 
   <!-- HERO -->
   <section id="hero">
+    <div class="hero-bg-grid"></div>
     <div class="hero-content">
-      <p class="hero-greeting">Hey, I'm</p>
-      <h1 class="hero-name">Abhiram Batchali<span class="accent">.</span></h1>
-      <h2 class="hero-tagline">I build things for the web &amp; beyond.</h2>
-      <p class="hero-desc">
-        Computer Science student at <strong>UIUC</strong> with a minor in Finance.
+      <p class="hero-greeting" data-anim="fade-up" data-delay="0">Hey, I'm</p>
+      <h1 class="hero-name" data-anim="fade-up" data-delay="1">
+        <span class="gradient-text">Abhiram Batchali</span><span class="accent">.</span>
+      </h1>
+      <h2 class="hero-tagline" data-anim="fade-up" data-delay="2">
+        <span id="typewriter"></span><span class="typewriter-cursor">|</span>
+      </h2>
+      <p class="hero-desc" data-anim="fade-up" data-delay="3">
+        Sophomore studying Computer Science at <strong>UIUC</strong> with a minor in Finance.
         Incoming SWE Intern at <strong>AWS&nbsp;Redshift</strong>.
         Passionate about systems engineering, machine learning, and scalable software.
       </p>
-      <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary">View My Work</a>
+      <div class="hero-cta" data-anim="fade-up" data-delay="4">
+        <a href="#projects" class="btn btn-primary">
+          <span>View My Work</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 17 5-5-5-5"/><path d="m13 17 5-5-5-5"/></svg>
+        </a>
         <a href="#contact" class="btn btn-outline">Get In Touch</a>
       </div>
-      <div class="hero-socials">
+      <div class="hero-socials" data-anim="fade-up" data-delay="5">
         <a href="https://github.com/Abhiram510" target="_blank" rel="noopener" aria-label="GitHub">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
         </a>
@@ -58,11 +71,11 @@
   <!-- ABOUT -->
   <section id="about" class="section">
     <div class="container">
-      <h2 class="section-heading"><span class="heading-num">01.</span> About Me</h2>
+      <h2 class="section-heading" data-anim="fade-up"><span class="heading-num">01.</span> About Me</h2>
       <div class="about-grid">
-        <div class="about-text">
+        <div class="about-text" data-anim="fade-up">
           <p>
-            I'm a junior studying <strong>Computer Science</strong> at the <strong>University of Illinois Urbana-Champaign</strong>
+            I'm a sophomore studying <strong>Computer Science</strong> at the <strong>University of Illinois Urbana-Champaign</strong>
             with a minor in <strong>Finance</strong>. I'm drawn to the intersection of engineering and business &mdash;
             whether that's building low-latency trading systems, designing ML pipelines, or shipping production mobile apps.
           </p>
@@ -74,19 +87,19 @@
             Outside of code, I'm involved with ISSA's treasury committee, enjoy music production, and am always looking
             for the next idea to build.
           </p>
-          <div class="about-highlights">
-            <div class="highlight">
-              <span class="highlight-value">3.95</span>
-              <span class="highlight-label">GPA</span>
-            </div>
-            <div class="highlight">
-              <span class="highlight-value">3x</span>
-              <span class="highlight-label">Dean's List</span>
-            </div>
-            <div class="highlight">
-              <span class="highlight-value">James</span>
-              <span class="highlight-label">Scholar</span>
-            </div>
+        </div>
+        <div class="about-highlights" data-anim="fade-up">
+          <div class="highlight glow-card">
+            <span class="highlight-value" data-count="3.95">0</span>
+            <span class="highlight-label">GPA</span>
+          </div>
+          <div class="highlight glow-card">
+            <span class="highlight-value" data-count="3">0</span>
+            <span class="highlight-label">Dean's List</span>
+          </div>
+          <div class="highlight glow-card">
+            <span class="highlight-value">James</span>
+            <span class="highlight-label">Scholar</span>
           </div>
         </div>
       </div>
@@ -96,33 +109,33 @@
   <!-- EXPERIENCE -->
   <section id="experience" class="section section-alt">
     <div class="container">
-      <h2 class="section-heading"><span class="heading-num">02.</span> Experience</h2>
+      <h2 class="section-heading" data-anim="fade-up"><span class="heading-num">02.</span> Experience</h2>
       <div class="timeline">
 
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content card">
+        <div class="timeline-item" data-anim="slide-left">
+          <div class="timeline-marker pulse"></div>
+          <div class="timeline-content glow-card">
             <div class="card-header">
               <div>
                 <h3>Software Engineer Intern</h3>
                 <p class="company">Amazon Web Services (Redshift)</p>
               </div>
-              <span class="date">May 2026 &ndash; Aug 2026</span>
+              <span class="date">Summer 2026</span>
             </div>
             <p class="location">Palo Alto, CA</p>
-            <p class="upcoming-badge">Incoming Summer 2026</p>
+            <p class="upcoming-badge">Incoming</p>
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item" data-anim="slide-left">
           <div class="timeline-marker"></div>
-          <div class="timeline-content card">
+          <div class="timeline-content glow-card">
             <div class="card-header">
               <div>
                 <h3>Software Engineer Intern</h3>
                 <p class="company">Kinnect</p>
               </div>
-              <span class="date">Jun 2025 &ndash; Aug 2025</span>
+              <span class="date">Jun &ndash; Aug 2025</span>
             </div>
             <p class="location">Remote</p>
             <ul>
@@ -133,9 +146,9 @@
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item" data-anim="slide-left">
           <div class="timeline-marker"></div>
-          <div class="timeline-content card">
+          <div class="timeline-content glow-card">
             <div class="card-header">
               <div>
                 <h3>Data Engineer Intern</h3>
@@ -159,10 +172,10 @@
   <!-- PROJECTS -->
   <section id="projects" class="section">
     <div class="container">
-      <h2 class="section-heading"><span class="heading-num">03.</span> Projects</h2>
+      <h2 class="section-heading" data-anim="fade-up"><span class="heading-num">03.</span> Projects</h2>
       <div class="projects-grid">
 
-        <div class="project-card card">
+        <div class="project-card glow-card" data-anim="fade-up" data-tilt>
           <div class="project-top">
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="project-icon"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
             <div class="project-links">
@@ -178,7 +191,7 @@
           </div>
         </div>
 
-        <div class="project-card card">
+        <div class="project-card glow-card" data-anim="fade-up" data-tilt>
           <div class="project-top">
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="project-icon"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
             <div class="project-links">
@@ -194,7 +207,7 @@
           </div>
         </div>
 
-        <div class="project-card card">
+        <div class="project-card glow-card" data-anim="fade-up" data-tilt>
           <div class="project-top">
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="project-icon"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
             <div class="project-links">
@@ -217,27 +230,27 @@
   <!-- SKILLS -->
   <section id="skills" class="section section-alt">
     <div class="container">
-      <h2 class="section-heading"><span class="heading-num">04.</span> Skills</h2>
+      <h2 class="section-heading" data-anim="fade-up"><span class="heading-num">04.</span> Skills</h2>
       <div class="skills-grid">
-        <div class="skill-category card">
+        <div class="skill-category glow-card" data-anim="fade-up">
           <h3>Languages</h3>
           <div class="skill-tags">
             <span>Python</span><span>Java</span><span>C++</span><span>JavaScript</span><span>TypeScript</span><span>SQL</span><span>Swift</span>
           </div>
         </div>
-        <div class="skill-category card">
+        <div class="skill-category glow-card" data-anim="fade-up">
           <h3>Frameworks</h3>
           <div class="skill-tags">
             <span>React</span><span>React Native</span><span>Node.js</span><span>Express</span><span>Flask</span><span>TensorFlow</span><span>scikit-learn</span>
           </div>
         </div>
-        <div class="skill-category card">
+        <div class="skill-category glow-card" data-anim="fade-up">
           <h3>Cloud & Infrastructure</h3>
           <div class="skill-tags">
             <span>AWS EC2</span><span>AWS Amplify</span><span>AWS SageMaker</span><span>Firebase</span><span>PostgreSQL</span><span>GraphQL</span><span>Docker</span><span>Kafka</span>
           </div>
         </div>
-        <div class="skill-category card">
+        <div class="skill-category glow-card" data-anim="fade-up">
           <h3>Tools</h3>
           <div class="skill-tags">
             <span>Git</span><span>Vercel</span><span>Render</span>
@@ -250,13 +263,18 @@
   <!-- CONTACT -->
   <section id="contact" class="section">
     <div class="container contact-container">
-      <h2 class="section-heading"><span class="heading-num">05.</span> Get In Touch</h2>
-      <p class="contact-text">
+      <h2 class="section-heading" data-anim="fade-up"><span class="heading-num">05.</span> Get In Touch</h2>
+      <p class="contact-text" data-anim="fade-up">
         I'm always open to chatting about new opportunities, interesting projects, or anything tech.
         Feel free to reach out &mdash; my inbox is always open.
       </p>
-      <a href="mailto:abhirambatchali@gmail.com" class="btn btn-primary">Say Hello</a>
-      <div class="contact-links">
+      <div data-anim="fade-up">
+        <a href="mailto:abhirambatchali@gmail.com" class="btn btn-primary magnetic">
+          <span>Say Hello</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 17 5-5-5-5"/><path d="m13 17 5-5-5-5"/></svg>
+        </a>
+      </div>
+      <div class="contact-links" data-anim="fade-up">
         <a href="https://github.com/Abhiram510" target="_blank" rel="noopener">GitHub</a>
         <a href="https://linkedin.com/in/abhirambatchali" target="_blank" rel="noopener">LinkedIn</a>
         <a href="mailto:abhirambatchali@gmail.com">abhirambatchali@gmail.com</a>
