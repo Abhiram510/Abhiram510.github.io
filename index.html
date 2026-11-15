@@ -50,8 +50,9 @@
         <span id="typewriter"></span><span class="typewriter-cursor">|</span>
       </h2>
       <p class="hero-desc" data-anim="fade-up" data-delay="3">
-        Sophomore studying Computer Science at <strong>UIUC</strong> with a minor in Finance.
-        Incoming SWE Intern at <strong>AWS&nbsp;Redshift</strong>.
+        Junior studying Computer Science at <strong>UIUC</strong> with a minor in Finance,
+        in the 5-year <strong>BS-MCS</strong> program.
+        Previously SWE Intern at <strong>AWS&nbsp;Redshift</strong>.
         Passionate about systems engineering, machine learning, and scalable software.
       </p>
       <div class="hero-cta" data-anim="fade-up" data-delay="4">
@@ -82,22 +83,25 @@
       <div class="about-grid">
         <div class="about-text" data-anim="fade-up">
           <p>
-            I'm a sophomore studying <strong>Computer Science</strong> at the <strong>University of Illinois Urbana-Champaign</strong>
-            with a minor in <strong>Finance</strong>. I'm drawn to the intersection of engineering and business &mdash;
+            I'm a junior studying <strong>Computer Science</strong> at the <strong>University of Illinois Urbana-Champaign</strong>
+            with a minor in <strong>Finance</strong> (GPA 3.9/4.0), and I'm in UIUC's 5-year <strong>BS-MCS</strong> program
+            (B.S. May 2027, M.C.S. May 2028). I'm drawn to the intersection of engineering and business &mdash;
             whether that's building low-latency trading systems, designing ML pipelines, or shipping production mobile apps.
           </p>
           <p>
-            This summer I'll be joining <strong>Amazon Web Services (Redshift)</strong> as a Software Engineer Intern in Palo Alto.
-            Previously, I've interned at Kinnect and Gameplay Inc., where I worked across iOS development, data engineering, and ML.
+            This past summer I interned at <strong>Amazon Web Services (Redshift)</strong> as a Software Engineer Intern
+            in East Palo Alto, working on test infrastructure in C++, Python, and Docker.
+            Previously, I interned at Kinnect and Gameplay Inc., where I worked across iOS development, data engineering, and ML.
           </p>
           <p>
+            Coursework includes Algorithms &amp; Models of Computation, Data Structures, Computer Architecture, and Numerical Methods.
             Outside of code, I'm involved with ISSA's treasury committee, enjoy music production, and am always looking
             for the next idea to build.
           </p>
         </div>
         <div class="about-highlights" data-anim="fade-up">
           <div class="highlight glow-card">
-            <span class="highlight-value" data-count="3.95">0</span>
+            <span class="highlight-value" data-count="3.9">0</span>
             <span class="highlight-label">GPA</span>
           </div>
           <div class="highlight glow-card">
@@ -127,10 +131,15 @@
                 <h3>Software Engineer Intern</h3>
                 <p class="company">Amazon Web Services (Redshift)</p>
               </div>
-              <span class="date">Summer 2026</span>
+              <span class="date">May &ndash; Aug 2026</span>
             </div>
-            <p class="location">Palo Alto, CA</p>
-            <p class="upcoming-badge">Incoming</p>
+            <p class="location">East Palo Alto, CA</p>
+            <ul>
+              <li>Extended Redshift's Super Simulated Mode framework from one to three concurrent burst clusters using C++, Python, and Docker, enabling eight previously unsupported tests and cutting iteration time by 75%</li>
+              <li>Engineered a cross-process, file-backed FIFO endpoint queue with RAII-based file locking and atomic updates to coordinate forked backend processes, eliminate duplicate burst identifiers, and support safe release and reacquisition</li>
+              <li>Root-caused and fixed two infrastructure race conditions: a container-pool TOCTOU bug that could assign one container twice, and a startup timing issue that intermittently broke roughly 1,100 burst tests</li>
+              <li>Improved failure triage by splitting monolithic container logs into per-test-class files and building a Python-based Kiro skill that classifies test failures using 22 heuristics and generates evidence-backed draft verdicts</li>
+            </ul>
           </div>
         </div>
 
@@ -146,9 +155,9 @@
             </div>
             <p class="location">Remote</p>
             <ul>
-              <li>Directed development of a production iOS app, owning end-to-end feature delivery across auth, backend integration, and deployment pipelines</li>
-              <li>Developed backend services with AWS Amplify, Cognito, and GraphQL APIs for secure auth and real-time data sync</li>
-              <li>Coordinated Kinnect&ndash;Kinnectd platform integration, handling auth, backend migration, and data consistency</li>
+              <li>Led end-to-end development and production releases for an iOS application serving 100+ live users, owning authentication, backend integration, deployment pipelines, and feature delivery</li>
+              <li>Implemented backend services with AWS Amplify, Cognito, and GraphQL APIs to support secure authentication, real-time data synchronization, and cross-platform data access</li>
+              <li>Coordinated the Kinnect&ndash;Kinnectd platform integration by migrating backend workflows, reconciling authentication systems, and preserving data consistency across both applications</li>
             </ul>
           </div>
         </div>
@@ -167,7 +176,7 @@
             <ul>
               <li>Optimized PostgreSQL ETL pipelines processing 10,000+ records, reducing data processing time by 35%</li>
               <li>Developed TensorFlow models to classify field types, improving accuracy by 50%+ across multiple categories</li>
-              <li>Automated large-scale image labeling using Google Images API, eliminating manual annotation</li>
+              <li>Automated large-scale image labeling using Google Images API, eliminating manual annotation and accelerating dataset preparation and ingestion workflows</li>
             </ul>
           </div>
         </div>
@@ -192,7 +201,7 @@
             </div>
           </div>
           <h3>High-Performance Trading Engine</h3>
-          <p>Low-latency trading system with an in-memory order book using price-time priority matching. Event-driven pipeline with Kafka for high-throughput order ingestion and async trade logging with PostgreSQL.</p>
+          <p>Low-latency C++ matching engine with an in-memory order book and price-time priority. Kafka pipelines sequence buy/sell orders with deterministic processing, plus async PostgreSQL persistence with trade replay and recovery.</p>
           <div class="project-tags">
             <span>C++</span><span>Kafka</span><span>PostgreSQL</span><span>Docker</span>
           </div>
@@ -208,7 +217,7 @@
             </div>
           </div>
           <h3>Bayjo</h3>
-          <p>Cross-platform mobile app connecting home chefs with students for on-demand food delivery. Built with real-time order tracking, secure auth, and scalable backend services.</p>
+          <p>Cofounded a cross-platform marketplace connecting home chefs with students for on-demand food delivery. Node.js and Firestore services handle authentication, order lifecycle, and real-time delivery status under concurrent updates.</p>
           <div class="project-tags">
             <span>React Native</span><span>Node.js</span><span>Firebase</span>
           </div>
@@ -227,7 +236,7 @@
             </div>
           </div>
           <h3>QuadRadar</h3>
-          <p>Full-stack event discovery platform for UIUC with BERT-powered recommendations, semantic search, and personalized suggestions based on user behavior.</p>
+          <p>Full-stack event discovery platform aggregating UIUC events with filtering, semantic search, and auth. BERT-based similarity scoring drives personalized recommendations via a Python ML service integrated with a Node.js API.</p>
           <div class="project-tags">
             <span>React</span><span>Node.js</span><span>Flask</span><span>BERT</span>
           </div>
@@ -245,25 +254,19 @@
         <div class="skill-category glow-card" data-anim="fade-up">
           <h3>Languages</h3>
           <div class="skill-tags">
-            <span>Python</span><span>Java</span><span>C++</span><span>JavaScript</span><span>TypeScript</span><span>SQL</span><span>Swift</span>
+            <span>C++</span><span>Python</span><span>Java</span><span>JavaScript</span><span>TypeScript</span><span>SQL</span><span>Swift</span>
           </div>
         </div>
         <div class="skill-category glow-card" data-anim="fade-up">
-          <h3>Frameworks</h3>
+          <h3>Frameworks &amp; Infrastructure</h3>
           <div class="skill-tags">
-            <span>React</span><span>React Native</span><span>Node.js</span><span>Express</span><span>Flask</span><span>TensorFlow</span><span>scikit-learn</span>
+            <span>Docker</span><span>Kafka</span><span>React</span><span>React Native</span><span>Node.js</span><span>Express</span><span>Flask</span><span>GraphQL</span><span>TensorFlow</span><span>scikit-learn</span>
           </div>
         </div>
         <div class="skill-category glow-card" data-anim="fade-up">
-          <h3>Cloud & Infrastructure</h3>
+          <h3>Cloud, Databases &amp; Tools</h3>
           <div class="skill-tags">
-            <span>AWS EC2</span><span>AWS Amplify</span><span>AWS SageMaker</span><span>Firebase</span><span>PostgreSQL</span><span>GraphQL</span><span>Docker</span><span>Kafka</span>
-          </div>
-        </div>
-        <div class="skill-category glow-card" data-anim="fade-up">
-          <h3>Tools</h3>
-          <div class="skill-tags">
-            <span>Git</span><span>Vercel</span><span>Render</span>
+            <span>AWS S3</span><span>AWS EC2</span><span>AWS Amplify</span><span>AWS SageMaker</span><span>PostgreSQL</span><span>Firebase</span><span>Linux</span><span>Git</span><span>Jenkins</span>
           </div>
         </div>
       </div>

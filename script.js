@@ -121,7 +121,7 @@
       const el = entry.target;
       const target = parseFloat(el.dataset.count);
       if (isNaN(target)) return;
-      const isFloat = target % 1 !== 0;
+      const decimals = (el.dataset.count.split('.')[1] || '').length;
       const duration = 1600;
       const start = performance.now();
 
@@ -129,7 +129,7 @@
         const progress = Math.min((now - start) / duration, 1);
         const eased = 1 - Math.pow(1 - progress, 4);
         const val = eased * target;
-        el.textContent = isFloat ? val.toFixed(2) : Math.round(val);
+        el.textContent = decimals ? val.toFixed(decimals) : Math.round(val);
         if (progress < 1) requestAnimationFrame(tick);
       }
       requestAnimationFrame(tick);
